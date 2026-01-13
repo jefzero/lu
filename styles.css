@@ -401,9 +401,10 @@ main {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 32px;
+    justify-content: center;
 }
 
 .service-card {
@@ -414,6 +415,8 @@ main {
     text-align: center;
     transition: var(--transicao);
     box-shadow: 0 6px 24px rgba(38, 54, 23, 0.08);
+    flex: 0 1 calc(33.333% - 22px);
+    min-width: 280px;
 }
 
 .service-card:hover {
